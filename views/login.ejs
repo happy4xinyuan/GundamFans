@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+<div class="container text-center" style="width: 60%">
+    <div class="jumbotron mt-1 text-center shadow rounded">
+        <h3><p>LOGIN</p></h3>
+        <h3><p>『俺がガンダムだ』</p></h3>
+
+        <div style="width: 30%; margin: 0 auto" class="text-center">
+            <form action="/login" method="POST" >
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="password">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success btn-block">LOGIN</button>
+                </div>
+
+                
+            </form>
+        </div>
+        
+    </div>
+    <a href="http://localhost:3000/wiki" class="btn btn-primary">go back to MS Wiki</a>
+</div>
+
+<%- include("partials/tail") %>

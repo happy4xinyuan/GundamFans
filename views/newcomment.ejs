@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+<div class="container text-center" style="width: 60%">
+    <div class="jumbotron mt-1 text-center shadow rounded">
+        <h3><p>NEW COMMENT FOR <%=ms.name%></p></h3>
+
+        <div style="width: 50%; margin: 0 auto" class="text-center">
+            <form action="/wiki/<%= ms._id%>/comment" method="POST" >
+                <div class="form-group">
+                    <textarea name="comText"  cols="50" rows="10"></textarea>
+                    
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success btn-block">COMMENT</button>
+                </div>
+
+                
+            </form>
+        </div>
+        
+    </div>
+    <a href="/wiki/<%= ms._id%>" class="btn btn-primary">BACK</a>
+</div>
+
+<%- include("partials/tail") %>

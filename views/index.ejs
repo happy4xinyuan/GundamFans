@@ -1,0 +1,35 @@
+<%- include("partials/header") %>
+
+<div class="container">
+    <div class="jumbotron mt-1 text-center shadow rounded">
+        <h1 >Xinyuan's Gundam World</h1>
+        <h3><p>-- 『俺がガンダムだ』</p></h3>
+        <a href="http://localhost:3000/wiki/new" class="text-right btn btn-primary btn-md">Record NEW MS</a>
+    </div>
+
+    <div class="row text-center">
+        <%mslist.forEach(function(e){%>
+            <div class="col-sm-6 col-lg-4">
+                <div class="thumnail shadow p-3 mb-5 bg-white rounded">
+                   <img src=" <%=e.img%>" style="width: 200px" >
+                   <div class="caption">
+                    <%= e.name%> 
+                    </div>
+                    <p>
+                        <a href="/wiki/<%= e._id%>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>    
+        <%})%>
+    </div>
+    <ul>
+        
+    </ul>
+    
+</div>
+
+    
+   
+
+
+<%- include("partials/tail") %>
