@@ -38,8 +38,8 @@ app.use(function(req,res,next){
 });
 
 //连接MongoDB
-mongoose.connect("mongodb://localhost:27017/gundam_fans",{useUnifiedTopology: true,useNewUrlParser: true });
-// mongodb+srv://Xinyuan:<FRtAje5USxYo4Jpz>@cluster0.z0lj8.mongodb.net/<dbname>?retryWrites=true&w=majority
+mongoose.connect("mongodb+srv://Xinyuan:6898061@cluster0.z0lj8.mongodb.net/GundamFans?retryWrites=true&w=majority",{useUnifiedTopology: true,useNewUrlParser: true });
+
 seedDB();
 
 app.use(indexRouter);
