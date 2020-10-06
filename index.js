@@ -46,6 +46,6 @@ app.use(indexRouter);
 app.use(gundammsRouter);
 app.use(commentRouter);
 
-app.listen(3000,function(){
+app.listen(process.env.PORT,process.env.IP,function(){
     console.log("gundam runnig");
 })
