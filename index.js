@@ -37,7 +37,7 @@ app.use(function(req,res,next){
     next();
 });
 
-let url= process.env.DATABASEURL || "mongodb://localhost:27017/gundam_fans";
+let url= process.env.DATABASEURL || "mongodb+srv://Xinyuan:6898061@cluster0.z0lj8.mongodb.net/GundamFans?retryWrites=true&w=majority";
 
 //连接MongoDB
 mongoose.connect(url,{useUnifiedTopology: true,useNewUrlParser: true });
@@ -48,6 +48,6 @@ app.use(indexRouter);
 app.use(gundammsRouter);
 app.use(commentRouter);
 
-app.listen(process.env.PORT,process.env.IP,function(){
+app.listen(process.env.PORT||3000,process.env.IP,function(){
     console.log("gundam runnig");
 })
