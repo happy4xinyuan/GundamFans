@@ -40,7 +40,7 @@ app.use(function(req,res,next){
 let url= process.env.DATABASEURL || "mongodb+srv://Xinyuan:6898061@cluster0.z0lj8.mongodb.net/GundamFans?retryWrites=true&w=majority";
 
 //连接MongoDB
-mongoose.connect(url,{useUnifiedTopology: true,useNewUrlParser: true });
+mongoose.connect("mongodb+srv://Xinyuan:6898061@cluster0.z0lj8.mongodb.net/GundamFans?retryWrites=true&w=majority",{useUnifiedTopology: true,useNewUrlParser: true });
 
 seedDB();
 
