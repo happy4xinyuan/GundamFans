@@ -37,8 +37,10 @@ app.use(function(req,res,next){
     next();
 });
 
+let url= process.env.DATABASEURL || "mongodb://localhost:27017/gundam_fans";
+
 //连接MongoDB
-mongoose.connect("mongodb+srv://Xinyuan:6898061@cluster0.z0lj8.mongodb.net/GundamFans?retryWrites=true&w=majority",{useUnifiedTopology: true,useNewUrlParser: true });
+mongoose.connect(url,{useUnifiedTopology: true,useNewUrlParser: true });
 
 seedDB();
 
